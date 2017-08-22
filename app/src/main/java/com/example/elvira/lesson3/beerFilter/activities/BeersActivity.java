@@ -29,6 +29,7 @@ import android.widget.Toast;
 import com.example.elvira.lesson3.MainActivity;
 import com.example.elvira.lesson3.beerFilter.api.ApiFactory;
 import com.example.elvira.lesson3.beerFilter.models.BeerAdapter;
+import com.example.elvira.lesson3.weather.activities.WeatherActivity;
 import com.squareup.picasso.Picasso;
 
 import com.example.elvira.lesson3.R;
@@ -254,6 +255,9 @@ public class BeersActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.chuck_norris_item:
                 startActivity(new Intent(BeersActivity.this, MainActivity.class));
+                return true;
+            case R.id.weather_item:
+                startActivity(new Intent(BeersActivity.this, WeatherActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

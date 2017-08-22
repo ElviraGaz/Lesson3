@@ -8,4 +8,8 @@
         android:id="@+id/beer_item"
         android:actionLayout="@layout/beers"
         android:title="Beer filter" />
+    <item
+        android:id="@+id/weather_item"
+        android:actionLayout="@layout/activity_weather"
+        android:title="Weather" />
 </menu>

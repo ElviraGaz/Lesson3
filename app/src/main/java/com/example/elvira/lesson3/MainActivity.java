@@ -23,6 +23,7 @@ import com.example.elvira.lesson3.beerFilter.activities.BeersActivity;
 import com.example.elvira.lesson3.chuckNorris.api.*;
 import com.example.elvira.lesson3.chuckNorris.models.Joke;
 import com.example.elvira.lesson3.chuckNorris.models.JokeText;
+import com.example.elvira.lesson3.weather.activities.WeatherActivity;
 
 import java.util.List;
 
@@ -157,6 +158,9 @@ public class MainActivity extends AppCompatActivity {
         {
             case R.id.beer_item:
                 startActivity(new Intent(MainActivity.this, BeersActivity.class));
+                return true;
+            case R.id.weather_item:
+                startActivity(new Intent(MainActivity.this, WeatherActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

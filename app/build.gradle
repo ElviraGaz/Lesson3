@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "WEATER_API_ID", '"b19aad8c2fc499d1ebfbbbe877fa9f3a"'
     }
     buildTypes {
         release {
@@ -21,23 +22,27 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.3.1'
 
 //  GSON - упрощает работу с JSON файлами
-    compile 'com.google.code.gson:gson:2.8.1'
+    
 
 //  Retrofit - позволяет выстраивать HTML запросы при помощи аннотаций
+    
+//  Logging-interceptor - позволяет логировать информацию о запросах и ответах на них
+    
+//  Stetho - позволяет просматривать запросы, которые проходят через приложение, при помощи консоли Google Chrome
+    
+//  Picasso - библиотека для загрузки изображений из интернета по url
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
-
-//  Logging-interceptor - позволяет логировать информацию о запросах и ответах на них
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
-
-//  Stetho - позволяет просматривать запросы, которые проходят через приложение, при помощи консоли Google Chrome
     compile 'com.facebook.stetho:stetho:1.5.0'
     compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
-
-//  Picasso - библиотека для загрузки изображений из интернета по url
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'com.jakewharton:butterknife:8.8.1'
 }
